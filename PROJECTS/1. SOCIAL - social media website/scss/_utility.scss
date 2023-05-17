@@ -1,0 +1,156 @@
+/* ----------| GOOGLE FONTS |------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+
+    // fonts
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Oleo Script', cursive;
+
+    // background colors
+    --section-white: #ffffff;
+    --background-white: #f0f2f5;
+    --background-white-2: #e7f3ff;
+    --background-white-3: #cfcfcf;
+
+    --white-element-hover-1: #e4e6eb;
+    --white-element-hover-2: #cfcfcf;
+
+    --bg-red: #ff2424;
+    --bg-gray: #53575c;
+    --bg-blue: #1b74e4;
+
+    --bg-black-100: rgba(92, 92, 92, 0.1);
+    --bg-black-500: rgba(92, 92, 92, 0.5);
+    --bg-black-700: rgba(92, 92, 92, 0.7);
+
+    // font colors
+    --text-gray-1: #65676b;
+    --text-gray-2: #8e8e8e;
+    --text-black-1: #050505;
+    --text-black-2: #323232;
+    --text-white: #fff;
+    --text-blue-1: #1b74e4;
+    --text-voilet: #551a8b;
+
+    // box shadow
+    --shadow-1: 0px 4px 6px 0px rgba(99, 99, 99, 0.2);
+    --shadow-2: 6px 6px 4px 0px rgba(99, 99, 99, 0.2);
+    --shadow-3: 0px 3px 8px rgba(0, 0, 0, 0.24);
+    --shadow-4: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    --shadow-5: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    // transition
+    --transition-01S: all 0.1s ease;
+    --transition-02S: all 0.2s ease;
+    --transition-03S: all 0.3s ease;
+
+
+
+}
+
+
+
+/* ---------- REFORMATING -------------------------------------- */
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-white);
+    font-family: var(--primary-font);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--section-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbcbcb;
+    border: 2px solid var(--section-white);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ---------- REUSABLE CLASS -------------------------------------- */
+
+// container
+.container {
+    width: 97%;
+    max-width: 1295px;
+    margin: 0 auto;
+}
+
+// scrollbar
+.has-scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 2px solid var(--section-white);
+    border-radius: 5px;
+}
+
+.has-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: var(--bg-black-500);
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-black-700);
+}
+
+// overlay
+.black-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 105;
+    background-color: #000;
+    opacity: 0;
+    display: none;
+    transition: all 0.3s ease;
+
+    &.active {
+        display: block;
+        opacity: 0.4;
+    }
+
+}

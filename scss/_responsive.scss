@@ -1,0 +1,290 @@
+// MEDIA QUERY FOR 992PX
+@media screen and (max-width:992px) {
+
+
+    // HEADER
+    .header .container {
+
+        // nav open button
+        .nav-open-button {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--t-white-2);
+            cursor: pointer;
+            transition: var(--transition-02);
+
+            &:hover {
+                color: var(--t-white-1);
+            }
+
+        }
+
+        // navgitation
+        .navigation {
+            position: fixed;
+            right: -110%;
+            top: 0;
+            height: 100vh;
+            width: 70%;
+            padding: 100px 0 0 70px;
+            background: var(--bg-gray-1);
+            border-left: 3px solid var(--t-white-1);
+            transition: var(--transition-05);
+            z-index: 10;
+
+            &.active {
+                right: 0;
+            }
+
+            .nav-lists .nav-list .link {
+                font-size: 1.3rem;
+            }
+
+            // nav close button
+            .nav-close-button {
+                display: block;
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                color: var(--t-white-2);
+                font-size: 2rem;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--t-white-1);
+                }
+
+            }
+
+            .nav-lists {
+                display: flex;
+                align-items: flex-start;
+                gap: 30px;
+                flex-direction: column;
+
+                .nav-list .button {
+                    margin-left: 0;
+                    display: block;
+                    font-size: 1.3rem;
+                }
+
+            }
+
+        }
+
+    }
+
+    // HOME SECTION
+    .home .text-content h1 {
+        font-size: 3rem;
+    }
+
+    .home .text-content h2 {
+        word-spacing: 1px;
+        font-size: 2rem;
+    }
+
+    .home .image-content .image-box-container {
+        width: 330px;
+        height: 385px;
+    }
+
+    .home .image-content .image-box-container .box-style {
+        height: 230px;
+    }
+
+    .home .image-content .image-box-container .hero-img {
+        width: 280px;
+        bottom: -20px;
+    }
+
+
+}
+
+// MEDIA QUERY FOR 768PX
+@media screen and (max-width:768px) {
+
+    // HOME SECTION
+    .home{
+        height: auto;
+        padding: 100px 0;
+    }
+
+    // MY SKILLS SECTION
+    .skills::before {
+        top: 2%;
+    }
+
+    .skills .dots {
+        width: 100px;
+        left: 20px;
+    }
+
+    // MY PROJECT SECTION
+    .projects .p-card-cont {
+        margin-bottom: 50px;
+    }
+
+}
+
+// MEDIA QUERY FOR 576PX
+@media screen and (max-width:576px) {
+
+    // OVER ALL
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    // HEADER
+    .header {
+        padding: 20px 8px;
+    }
+
+    .header .container .logo {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0.1px;
+    }
+
+    .header .container .navigation {
+        width: 80%;
+    }
+
+    // HERO SECTION
+
+    .home .image-content .image-box-container {
+        width: 280px;
+        height: 320px;
+    }
+
+    .home .image-content .image-box-container .box-style {
+        height: 201px;
+    }
+
+    .home .image-content .image-box-container .hero-img {
+        width: 235px;
+        bottom: -20px;
+    }
+
+    .home .text-content p {
+        font-size: 1.2rem;
+        word-spacing: 0px;
+    }
+
+    .home .text-content h1 {
+        font-size: 2rem;
+        margin: 8px 0 0px;
+    }
+
+    .home .text-content h2 {
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+
+    .home .text-content .act-btn {
+        margin-top: 15px;
+    }
+
+    .button {
+        padding: 9px 10px;
+        letter-spacing: 0px;
+        font-size: 0.9rem;
+    }
+
+    // ABOUT SECTION
+
+    .about .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .about .image-content .image {
+        width: 300px;
+    }
+
+    .about .text-content .heading {
+        font-size: 1.3rem;
+    }
+
+    .about .text-content .description {
+        word-spacing: 0;
+        font-size: 1rem;
+    }
+
+    .about .text-content .links ul li {
+        margin-bottom: 8px;
+    }
+
+    .about .text-content .links ul li span {
+        display: none;
+    }
+
+    .about .text-content .act-btn {
+        margin-top: 20px;
+    }
+
+    // MY SKILLS SECTION
+    .skills::before {
+        top: 3%;
+        right: -18%;
+        width: 140px;
+        height: 140px;
+    }
+
+    .skills .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .skills .dots {
+        bottom: 66px;
+        left: -40px;
+    }
+
+    // MY PROJECT SECTION
+    
+    .projects .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .projects .project-card {
+        width: 95%;
+    }
+
+    .projects .project-card .project-card-act-btn {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .projects .project-card .project-card-act-btn .button {
+        width: 100%;
+    }
+
+    .projects .p-card-cont {
+        margin-bottom: 40px;
+    }
+
+    .projects .name {
+        font-size: 1.4rem;
+    }
+
+    .projects .name-desccription .description .desc-submenu {
+        font-size: 0.85rem;
+    }
+
+    // FOOTER
+
+    .contact .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .footer a {
+        height: 25px;
+        width: 25px;
+        margin-right: 5px;
+        font-size: 0.8rem;
+    }
+
+    .footer h3 {
+        font-size: 1.2rem;
+    }
+
+}
